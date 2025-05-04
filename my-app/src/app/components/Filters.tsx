@@ -26,7 +26,12 @@ interface FilterProps {
             <option value="">All Locations</option>
             <option value="Delhi">Delhi</option>
             <option value="Mumbai">Mumbai</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Pune">Pune</option>
+            <option value="Chennai">Chennai</option>
             <option value="Hyderabad">Hyderabad</option>
+            <option value="Nagpur">Nagpur</option>
+            <option value="Jaipur">Jaipur</option>
             
             {/* Add more as needed */}
           </select>
@@ -41,7 +46,12 @@ interface FilterProps {
             <option value="">All Specializations</option>
             <option value="General Physician">General Physician</option>
             <option value="Internal Medicine">Internal Medicine</option>
-            <option value="Skin Specialist">Skin Specialist</option>
+            <option value="ENT">ENT</option>
+            <option value="Neurologist">Neurologist</option>
+            <option value="Gynecologist">Gynecologist</option>
+            <option value="Cardiologist">Cardiologist</option>
+            <option value="Dentist">Dentist</option>
+            <option value="Orthopedic">Orthopedic</option>
             
           </select>
         </label>

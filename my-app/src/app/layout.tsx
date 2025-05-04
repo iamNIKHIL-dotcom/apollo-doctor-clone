@@ -32,7 +32,8 @@ export default function RootLayout({
           <div className="flex items-center">
             <div className="w-10 h-10 bg-gray-200 rounded mr-3 flex items-center justify-center">
               {/* TODO: Insert logo image here */}
-              <span className="text-xs text-gray-400">Logo</span>
+              <img src="https://media-exp1.licdn.com/dms/image/C510BAQEfLyZ-XY1_TA/company-logo_200_200/0/1580537385561?e=2159024400&v=beta&t=dn3gjEL0HEpowQkZDSwj6PrlW4YfxqIOO89AE5GULxI" alt="Description of Image"></img>
+              {/* <span className="text-xs text-gray-400">Logo</span> */}
             </div>
             <span className="font-bold text-lg tracking-tight">Apollo Doctors</span>
           </div>

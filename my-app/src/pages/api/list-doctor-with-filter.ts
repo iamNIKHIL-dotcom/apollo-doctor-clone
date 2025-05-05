@@ -1,13 +1,22 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import prisma from '../../app/lib/prisma';
 
+interface WhereClause {
+  location?: string;
+  specialization?: string;
+  consultationFee?: {
+    gte?: number;
+    lte?: number;
+  };
+}
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { page = 1, location, specialization, feeRange } = req.query;
   const take = 10;
   const skip = (Number(page) - 1) * take;
 
   try {
-    const where: any = {};
+    const where: WhereClause = {};
     if (location) where.location = String(location);
     if (specialization) where.specialization = String(specialization);
     if (feeRange) {
@@ -30,7 +39,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     ]);
 
     res.status(200).json({ doctors, totalCount });
-  } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch doctors' });
+  } catch {
+    res.status(500).json({ error: 'Failed to fetch doctors. Please try again later.' });
   }
 }

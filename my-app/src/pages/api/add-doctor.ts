@@ -7,7 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const doctor = await prisma.doctor.create({ data: req.body });
     res.status(201).json(doctor);
-  } catch (error) {
-    res.status(500).json({ error: 'Failed to add doctor' });
+  } catch {
+    res.status(500).json({ error: 'Failed to add doctor. Please check the data and try again.' });
   }
 }

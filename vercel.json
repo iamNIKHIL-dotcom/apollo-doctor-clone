@@ -2,11 +2,8 @@
   "version": 2,
   "builds": [
     {
-      "src": "my-app/package.json",
+      "src": "package.json",
       "use": "@vercel/next"
     }
-  ],
-  "env": {
-    "DATABASE_URL": "@DATABASE_URL"
-  }
-} 
+  ]
+}
